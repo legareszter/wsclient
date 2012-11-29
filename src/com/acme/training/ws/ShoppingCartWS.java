@@ -47,23 +47,6 @@ public interface ShoppingCartWS {
 
     /**
      * 
-     * @param arg2
-     * @param arg1
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "addFood", targetNamespace = "http://ws.training.acme.com/", className = "com.acme.training.ws.AddFood")
-    @ResponseWrapper(localName = "addFoodResponse", targetNamespace = "http://ws.training.acme.com/", className = "com.acme.training.ws.AddFoodResponse")
-    public void addFood(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        int arg1,
-        @WebParam(name = "arg2", targetNamespace = "")
-        int arg2);
-
-    /**
-     * 
      * @param arg4
      * @param arg3
      * @param arg2
@@ -135,6 +118,43 @@ public interface ShoppingCartWS {
         int arg0,
         @WebParam(name = "arg1", targetNamespace = "")
         String arg1);
+
+    /**
+     * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "addFoodByID", targetNamespace = "http://ws.training.acme.com/", className = "com.acme.training.ws.AddFoodByID")
+    @ResponseWrapper(localName = "addFoodByIDResponse", targetNamespace = "http://ws.training.acme.com/", className = "com.acme.training.ws.AddFoodByIDResponse")
+    public void addFoodByID(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        int arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        int arg2);
+
+    /**
+     * 
+     * @param arg3
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "addFoodByName", targetNamespace = "http://ws.training.acme.com/", className = "com.acme.training.ws.AddFoodByName")
+    @ResponseWrapper(localName = "addFoodByNameResponse", targetNamespace = "http://ws.training.acme.com/", className = "com.acme.training.ws.AddFoodByNameResponse")
+    public void addFoodByName(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        String arg2,
+        @WebParam(name = "arg3", targetNamespace = "")
+        int arg3);
 
     /**
      * 

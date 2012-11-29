@@ -30,30 +30,24 @@ public class ObjectFactory {
     private final static QName _GetNewShoppingCartResponse_QNAME = new QName("http://ws.training.acme.com/", "getNewShoppingCartResponse");
     private final static QName _CheckOutResponse_QNAME = new QName("http://ws.training.acme.com/", "checkOutResponse");
     private final static QName _InitResponse_QNAME = new QName("http://ws.training.acme.com/", "initResponse");
-    private final static QName _AddFood_QNAME = new QName("http://ws.training.acme.com/", "addFood");
+    private final static QName _AddFoodByIDResponse_QNAME = new QName("http://ws.training.acme.com/", "addFoodByIDResponse");
+    private final static QName _AddFoodByNameResponse_QNAME = new QName("http://ws.training.acme.com/", "addFoodByNameResponse");
     private final static QName _SetDeliveryAddressResponse_QNAME = new QName("http://ws.training.acme.com/", "setDeliveryAddressResponse");
     private final static QName _SetCustomerResponse_QNAME = new QName("http://ws.training.acme.com/", "setCustomerResponse");
+    private final static QName _AddFoodByName_QNAME = new QName("http://ws.training.acme.com/", "addFoodByName");
     private final static QName _GetNewShoppingCart_QNAME = new QName("http://ws.training.acme.com/", "getNewShoppingCart");
     private final static QName _GetShoppingCartId_QNAME = new QName("http://ws.training.acme.com/", "getShoppingCartId");
-    private final static QName _AddFoodResponse_QNAME = new QName("http://ws.training.acme.com/", "addFoodResponse");
     private final static QName _SetCustomer_QNAME = new QName("http://ws.training.acme.com/", "setCustomer");
     private final static QName _SetBillingAddressResponse_QNAME = new QName("http://ws.training.acme.com/", "setBillingAddressResponse");
-    private final static QName _CheckOut_QNAME = new QName("http://ws.training.acme.com/", "checkOut");
     private final static QName _SetBillingAddress_QNAME = new QName("http://ws.training.acme.com/", "setBillingAddress");
+    private final static QName _CheckOut_QNAME = new QName("http://ws.training.acme.com/", "checkOut");
+    private final static QName _AddFoodByID_QNAME = new QName("http://ws.training.acme.com/", "addFoodByID");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.acme.training.ws
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link SetBillingAddress }
-     * 
-     */
-    public SetBillingAddress createSetBillingAddress() {
-        return new SetBillingAddress();
     }
 
     /**
@@ -65,67 +59,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SetCustomerResponse }
+     * Create an instance of {@link AddFoodByIDResponse }
      * 
      */
-    public SetCustomerResponse createSetCustomerResponse() {
-        return new SetCustomerResponse();
+    public AddFoodByIDResponse createAddFoodByIDResponse() {
+        return new AddFoodByIDResponse();
     }
 
     /**
-     * Create an instance of {@link InitResponse }
+     * Create an instance of {@link AddFoodByID }
      * 
      */
-    public InitResponse createInitResponse() {
-        return new InitResponse();
+    public AddFoodByID createAddFoodByID() {
+        return new AddFoodByID();
     }
 
     /**
-     * Create an instance of {@link SetDeliveryAddressResponse }
+     * Create an instance of {@link SetBillingAddress }
      * 
      */
-    public SetDeliveryAddressResponse createSetDeliveryAddressResponse() {
-        return new SetDeliveryAddressResponse();
-    }
-
-    /**
-     * Create an instance of {@link AddFoodResponse }
-     * 
-     */
-    public AddFoodResponse createAddFoodResponse() {
-        return new AddFoodResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetShoppingCartIdResponse }
-     * 
-     */
-    public GetShoppingCartIdResponse createGetShoppingCartIdResponse() {
-        return new GetShoppingCartIdResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetShoppingCartId }
-     * 
-     */
-    public GetShoppingCartId createGetShoppingCartId() {
-        return new GetShoppingCartId();
-    }
-
-    /**
-     * Create an instance of {@link CheckOutResponse }
-     * 
-     */
-    public CheckOutResponse createCheckOutResponse() {
-        return new CheckOutResponse();
-    }
-
-    /**
-     * Create an instance of {@link SetBillingAddressResponse }
-     * 
-     */
-    public SetBillingAddressResponse createSetBillingAddressResponse() {
-        return new SetBillingAddressResponse();
+    public SetBillingAddress createSetBillingAddress() {
+        return new SetBillingAddress();
     }
 
     /**
@@ -137,19 +91,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SetDeliveryAddress }
+     * Create an instance of {@link GetShoppingCartIdResponse }
      * 
      */
-    public SetDeliveryAddress createSetDeliveryAddress() {
-        return new SetDeliveryAddress();
+    public GetShoppingCartIdResponse createGetShoppingCartIdResponse() {
+        return new GetShoppingCartIdResponse();
     }
 
     /**
-     * Create an instance of {@link AddFood }
+     * Create an instance of {@link InitResponse }
      * 
      */
-    public AddFood createAddFood() {
-        return new AddFood();
+    public InitResponse createInitResponse() {
+        return new InitResponse();
     }
 
     /**
@@ -161,11 +115,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetNewShoppingCartResponse }
+     * Create an instance of {@link AddFoodByName }
      * 
      */
-    public GetNewShoppingCartResponse createGetNewShoppingCartResponse() {
-        return new GetNewShoppingCartResponse();
+    public AddFoodByName createAddFoodByName() {
+        return new AddFoodByName();
+    }
+
+    /**
+     * Create an instance of {@link CheckOutResponse }
+     * 
+     */
+    public CheckOutResponse createCheckOutResponse() {
+        return new CheckOutResponse();
+    }
+
+    /**
+     * Create an instance of {@link SetDeliveryAddress }
+     * 
+     */
+    public SetDeliveryAddress createSetDeliveryAddress() {
+        return new SetDeliveryAddress();
+    }
+
+    /**
+     * Create an instance of {@link SetDeliveryAddressResponse }
+     * 
+     */
+    public SetDeliveryAddressResponse createSetDeliveryAddressResponse() {
+        return new SetDeliveryAddressResponse();
     }
 
     /**
@@ -174,6 +152,46 @@ public class ObjectFactory {
      */
     public Init createInit() {
         return new Init();
+    }
+
+    /**
+     * Create an instance of {@link GetShoppingCartId }
+     * 
+     */
+    public GetShoppingCartId createGetShoppingCartId() {
+        return new GetShoppingCartId();
+    }
+
+    /**
+     * Create an instance of {@link SetCustomerResponse }
+     * 
+     */
+    public SetCustomerResponse createSetCustomerResponse() {
+        return new SetCustomerResponse();
+    }
+
+    /**
+     * Create an instance of {@link SetBillingAddressResponse }
+     * 
+     */
+    public SetBillingAddressResponse createSetBillingAddressResponse() {
+        return new SetBillingAddressResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetNewShoppingCartResponse }
+     * 
+     */
+    public GetNewShoppingCartResponse createGetNewShoppingCartResponse() {
+        return new GetNewShoppingCartResponse();
+    }
+
+    /**
+     * Create an instance of {@link AddFoodByNameResponse }
+     * 
+     */
+    public AddFoodByNameResponse createAddFoodByNameResponse() {
+        return new AddFoodByNameResponse();
     }
 
     /**
@@ -231,12 +249,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddFood }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddFoodByIDResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://ws.training.acme.com/", name = "addFood")
-    public JAXBElement<AddFood> createAddFood(AddFood value) {
-        return new JAXBElement<AddFood>(_AddFood_QNAME, AddFood.class, null, value);
+    @XmlElementDecl(namespace = "http://ws.training.acme.com/", name = "addFoodByIDResponse")
+    public JAXBElement<AddFoodByIDResponse> createAddFoodByIDResponse(AddFoodByIDResponse value) {
+        return new JAXBElement<AddFoodByIDResponse>(_AddFoodByIDResponse_QNAME, AddFoodByIDResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddFoodByNameResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.training.acme.com/", name = "addFoodByNameResponse")
+    public JAXBElement<AddFoodByNameResponse> createAddFoodByNameResponse(AddFoodByNameResponse value) {
+        return new JAXBElement<AddFoodByNameResponse>(_AddFoodByNameResponse_QNAME, AddFoodByNameResponse.class, null, value);
     }
 
     /**
@@ -258,6 +285,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddFoodByName }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.training.acme.com/", name = "addFoodByName")
+    public JAXBElement<AddFoodByName> createAddFoodByName(AddFoodByName value) {
+        return new JAXBElement<AddFoodByName>(_AddFoodByName_QNAME, AddFoodByName.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetNewShoppingCart }{@code >}}
      * 
      */
@@ -273,15 +309,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws.training.acme.com/", name = "getShoppingCartId")
     public JAXBElement<GetShoppingCartId> createGetShoppingCartId(GetShoppingCartId value) {
         return new JAXBElement<GetShoppingCartId>(_GetShoppingCartId_QNAME, GetShoppingCartId.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddFoodResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.training.acme.com/", name = "addFoodResponse")
-    public JAXBElement<AddFoodResponse> createAddFoodResponse(AddFoodResponse value) {
-        return new JAXBElement<AddFoodResponse>(_AddFoodResponse_QNAME, AddFoodResponse.class, null, value);
     }
 
     /**
@@ -303,6 +330,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SetBillingAddress }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.training.acme.com/", name = "setBillingAddress")
+    public JAXBElement<SetBillingAddress> createSetBillingAddress(SetBillingAddress value) {
+        return new JAXBElement<SetBillingAddress>(_SetBillingAddress_QNAME, SetBillingAddress.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CheckOut }{@code >}}
      * 
      */
@@ -312,12 +348,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SetBillingAddress }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddFoodByID }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://ws.training.acme.com/", name = "setBillingAddress")
-    public JAXBElement<SetBillingAddress> createSetBillingAddress(SetBillingAddress value) {
-        return new JAXBElement<SetBillingAddress>(_SetBillingAddress_QNAME, SetBillingAddress.class, null, value);
+    @XmlElementDecl(namespace = "http://ws.training.acme.com/", name = "addFoodByID")
+    public JAXBElement<AddFoodByID> createAddFoodByID(AddFoodByID value) {
+        return new JAXBElement<AddFoodByID>(_AddFoodByID_QNAME, AddFoodByID.class, null, value);
     }
 
 }

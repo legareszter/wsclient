@@ -1,5 +1,9 @@
 package com.acme.training.ws;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class shoppingCartClient {
 
     /**
@@ -9,22 +13,52 @@ public class shoppingCartClient {
         ShoppingCartWSService service = new ShoppingCartWSService();
         ShoppingCartWS sCWS = service.getShoppingCartWSPort();
         int id = sCWS.getNewShoppingCart();
-//        sCWS.setCustomer(id, "Sztike");
-//        sCWS.addFood(id, 2, 3);
-//        sCWS.setDeliveryAddress(id, "1082", "Magyarország", "Budapest", "Futó utca");
-//        sCWS.setBillingAddress(id, "1082", "Magyarország", "Budapest", "Futó utca");
-        String customer = args[0];
-        int foodId = Integer.parseInt(args[1]);
-        int quantity = Integer.parseInt(args[2]);
-        String zip = args[3];
-        String country = args[4];
-        String city = args[5];
-        String street = args[6];
+        System.out.println("Hello! Kerlek, add meg a neved!");
+        String customer = readAnswer();
+        String[] tmp; 
+        String restiName;
+        String foodName;
+        int quantity;
+        String moreFood = "I";
+        while (moreFood.equalsIgnoreCase("I")) {
+            System.out.println("Mit akarsz rendelni? (etterem neve,etel neve)");
+            tmp = readAnswer().split(", *");
+            restiName = tmp[0];
+            try {
+                foodName = tmp[1];
+            } catch (IndexOutOfBoundsException e) {
+                System.out.println("Nem adtal meg etelt vagy ettermet. Kerlek, add meg ujra! (etterem,etel)");
+                tmp = readAnswer().split(", *");
+                restiName = tmp[0];
+                foodName = tmp[1];
+            }
+            System.out.println("Mennyit kersz belole?");
+            quantity = Integer.parseInt(readAnswer());
+            sCWS.addFoodByName(id, restiName, foodName, quantity);
+            System.out.println("Kersz meg vmit? (I/N)");
+            moreFood = readAnswer();
+        }
+        System.out.println("Hova szallitsuk? (zip,street)");
+        tmp = readAnswer().split(", *"); 
+        String zip = tmp[0];
+        String street = tmp[1];
+        String country = "Magyarorszag";
+        String city = "Budapest";
         sCWS.setCustomer(id, customer);
-        sCWS.addFood(id, foodId, quantity);
         sCWS.setDeliveryAddress(id, zip, country, city, street);
         sCWS.setBillingAddress(id, zip, country, city, street);
-        System.out.println(String.format("Rendelésedet rögzítettük, száma: %d.", sCWS.checkOut(id)));
+        System.out.println(String.format("Rendelesedet rogzitettuk, szama: %d.", sCWS.checkOut(id)));
+    }
+
+    private static String readAnswer() {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        String s = null;
+        try {
+        s = in.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return s;
     }
 
 }
